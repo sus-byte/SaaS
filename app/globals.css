@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+    .btn {
+        @apply  py-2 px-4 rounded-lg font-medium tracking-tight inline-flex items-center justify-center;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    .btn-primary {
+        @apply bg-black text-white;
+    }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+    .btn-text {
+        @apply bg-transparent text-black;
+    }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .custom-container {
+        @apply mx-4 md:mx-8 lg:mx-16
+    }
+
+    .logoticker-img {
+        @apply h-8 w-auto;
+    }
+
+    .tag {
+        @apply border border-[#222]/10 rounded-lg text-[14px] tracking-tight px-2 py-1
+    }
+
+    .section-title {
+        @apply text-center text-3xl md:text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E7F] text-transparent bg-clip-text mb-6;
+    }
+
+    .section-subtitle {
+        @apply text-center text-[#010D3E] text-[20px] tracking-tight;
+    }
+
+    .section-heading {
+        @apply max-w-[540px] mx-auto;
+    }
+
+    .card {
+        @apply p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full;
+    }
 }
